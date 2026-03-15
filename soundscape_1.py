@@ -56,14 +56,14 @@ def received_db(source_db, dist_px):
 class Ship:
     def __init__(self, x, slot=0, start_y=None):
         self.lane = float(x)
-        self.x    = float(x)
-        self.y    = float(start_y if start_y is not None else -80 - slot * 55)
-        self.speed      = 0.7 + (slot % 3) * 0.15
+        self.x = float(x)
+        self.y = float(start_y if start_y is not None else -80 - slot * 55)
+        self.speed  = 0.7 + (slot % 3) * 0.15
         self.base_speed = self.speed
-        self.is_slow        = False
+        self.is_slow  = False
         self.being_dragged  = False
-        self.wake_trail     = []
-        self.finished       = False
+        self.wake_trail = []
+        self.finished  = False
 
     @property
     def noise_db(self):
